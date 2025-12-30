@@ -106,24 +106,102 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto px-4">
                 
-                <!-- Card 1: Students (Modern Minimal) -->
-                <div onclick="showPage('topic-1')" class="group relative bg-white rounded-[2rem] p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-blue-100/50 border border-gray-100 hover:-translate-y-2 overflow-hidden">
+                <!-- Card 1: Students (Dimensional Style) -->
+                <div onclick="showPage('topic-1')" class="group relative bg-gradient-to-br from-white via-white to-blue-50/50 rounded-[2rem] p-8 cursor-pointer transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(59,130,246,0.25)] border border-blue-100/60 hover:border-blue-200 hover:-translate-y-2 overflow-hidden">
                     <!-- Decorative Background Blob -->
-                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-blue-100/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
                     
                     <div class="relative z-10">
-                        <div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-blue-300/50">
+                        <div class="w-16 h-16 rounded-2xl bg-white text-blue-600 flex items-center justify-center mb-8 shadow-[0_8px_16px_-4px_rgba(59,130,246,0.15)] group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 group-hover:shadow-blue-400/50">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                         </div>
                         
-                        <h3 class="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">จำนวนเด็กเล็กและนักเรียน</h3>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">จำนวนเด็กเล็กและนักเรียน</h3>
                         <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">ข้อมูลสถิติแสดงจำนวนเด็กเล็กและนักเรียนทั้งหมดในสังกัดเทศบาลตำบลหัวดง</p>
                         
-                        <div class="flex items-center text-blue-500 text-sm font-medium">
+                        <div class="flex items-center text-blue-500 text-sm font-semibold tracking-wide">
                             <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
-                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                            <div class="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Regulations (Dimensional Style) -->
+                <div onclick="showPage('topic-2')" class="group relative bg-gradient-to-br from-white via-white to-orange-50/50 rounded-[2rem] p-8 cursor-pointer transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(249,115,22,0.25)] border border-orange-100/60 hover:border-orange-200 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-orange-100/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-white text-orange-600 flex items-center justify-center mb-8 shadow-[0_8px_16px_-4px_rgba(249,115,22,0.15)] group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 group-hover:shadow-orange-400/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors">ระเบียบรายได้สถานศึกษา 62</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">ระเบียบกระทรวงมหาดไทย ว่าด้วยรายได้และการจ่ายเงินสถานศึกษาสังกัด อปท.</p>
+                        
+                        <div class="flex items-center text-orange-500 text-sm font-semibold tracking-wide">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: D-LEP Manual (Dimensional Style) -->
+                <div onclick="showPage('topic-3')" class="group relative bg-gradient-to-br from-white via-white to-emerald-50/50 rounded-[2rem] p-8 cursor-pointer transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] border border-emerald-100/60 hover:border-emerald-200 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-emerald-100/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
+
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-white text-emerald-600 flex items-center justify-center mb-8 shadow-[0_8px_16px_-4px_rgba(16,185,129,0.15)] group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:shadow-emerald-400/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">คู่มือระบบ D-LEP</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">คู่มือการใช้งานระบบดิจิทัลเพื่อการพัฒนาวิชาชีพทางการศึกษาท้องถิ่น</p>
+
+                        <div class="flex items-center text-emerald-500 text-sm font-semibold tracking-wide">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Influenza Measures (Dimensional Style) -->
+                <div onclick="showPage('topic-4')" class="group relative bg-gradient-to-br from-white via-white to-rose-50/50 rounded-[2rem] p-8 cursor-pointer transition-all duration-500 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_50px_-12px_rgba(244,63,94,0.25)] border border-rose-100/60 hover:border-rose-200 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-rose-100/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
+
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-white text-rose-600 flex items-center justify-center mb-8 shadow-[0_8px_16px_-4px_rgba(244,63,94,0.15)] group-hover:bg-rose-600 group-hover:text-white transition-all duration-300 group-hover:shadow-rose-400/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3 group-hover:text-rose-700 transition-colors">มาตรการโรคไข้หวัดใหญ่</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">มาตรการป้องกันและควบคุมโรคไข้หวัดใหญ่ในสถานศึกษา</p>
+
+                        <div class="flex items-center text-rose-500 text-sm font-semibold tracking-wide">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-rose-50 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
