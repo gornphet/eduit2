@@ -55,12 +55,19 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .card-hover {
-            transition: all 0.3s ease;
+        /* Iframe Responsive Fixes */
+        .responsive-iframe-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        .responsive-iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
     </style>
 </head>
@@ -71,7 +78,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-4 cursor-pointer" onclick="showPage('home')">
-                    <!-- Placeholder Logo Icon -->
+                    <!-- Logo Icon -->
                     <div class="bg-white/10 p-2 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -91,79 +98,116 @@
 
         <!-- PAGE: HOME (DASHBOARD MENU) -->
         <div id="page-home" class="page-section fade-in block">
-            <div class="text-center mb-12 mt-4">
-                <span class="text-blue-600 font-semibold tracking-wider text-xs uppercase mb-2 block">Dashboard</span>
-                <h2 class="text-3xl md:text-4xl font-light text-gray-800">ศูนย์ข้อมูลสารสนเทศ</h2>
-                <div class="w-16 h-1 bg-blue-500 mx-auto mt-4 rounded-full"></div>
+            <div class="text-center mb-16 mt-8">
+                <span class="text-blue-600 font-bold tracking-widest text-xs uppercase mb-3 block opacity-80">EDUCATION DATA CENTER</span>
+                <h2 class="text-3xl md:text-5xl font-light text-gray-800 tracking-tight">ศูนย์ข้อมูลสารสนเทศ</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mt-6 rounded-full opacity-80"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto px-4">
                 
-                <!-- Card 1: Minimal Style -->
-                <div onclick="showPage('topic-1')" class="group bg-white rounded-2xl p-8 cursor-pointer transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-blue-100 flex flex-col items-center text-center relative overflow-hidden">
-                    <!-- Top accent line on hover -->
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                <!-- Card 1: Students (Modern Minimal) -->
+                <div onclick="showPage('topic-1')" class="group relative bg-white rounded-[2rem] p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-blue-100/50 border border-gray-100 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
                     
-                    <div class="mb-6 p-4 rounded-full bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                        </svg>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-8 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-blue-300/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">จำนวนเด็กเล็กและนักเรียน</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">ข้อมูลสถิติแสดงจำนวนเด็กเล็กและนักเรียนทั้งหมดในสังกัดเทศบาลตำบลหัวดง</p>
+                        
+                        <div class="flex items-center text-blue-500 text-sm font-medium">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">จำนวนเด็กเล็กและนักเรียน</h3>
-                    <p class="text-gray-500 text-sm font-light leading-relaxed mb-6">ข้อมูลสถิติแสดงจำนวนเด็กเล็กและนักเรียน<br>ในสังกัดเทศบาลตำบลหัวดง</p>
-                    
-                    <span class="mt-auto text-blue-500 text-xs font-semibold tracking-wide uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
-                        เข้าดูข้อมูล 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </span>
                 </div>
 
-                <!-- Card 2: Minimal Style -->
-                <div onclick="showPage('topic-2')" class="group bg-white rounded-2xl p-8 cursor-pointer transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-orange-100 flex flex-col items-center text-center relative overflow-hidden">
-                    <!-- Top accent line on hover -->
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-400 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-
-                    <div class="mb-6 p-4 rounded-full bg-orange-50 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
+                <!-- Card 2: Regulations (Modern Minimal) -->
+                <div onclick="showPage('topic-2')" class="group relative bg-white rounded-[2rem] p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-orange-100/50 border border-gray-100 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-orange-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center mb-8 group-hover:bg-orange-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-orange-300/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors">ระเบียบรายได้สถานศึกษา 62</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">ระเบียบกระทรวงมหาดไทย ว่าด้วยรายได้และการจ่ายเงินสถานศึกษาสังกัด อปท.</p>
+                        
+                        <div class="flex items-center text-orange-500 text-sm font-medium">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
-
-                    <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-orange-700 transition-colors">ระเบียบรายได้สถานศึกษา 2562</h3>
-                    <p class="text-gray-500 text-sm font-light leading-relaxed mb-6">ระเบียบกระทรวงมหาดไทย ว่าด้วยรายได้<br>และการจ่ายเงินสถานศึกษาสังกัด อปท.</p>
-
-                    <span class="mt-auto text-orange-500 text-xs font-semibold tracking-wide uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
-                        เข้าดูข้อมูล
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </span>
                 </div>
 
-                <!-- Card 3: New Topic (D-LEP) -->
-                <div onclick="showPage('topic-3')" class="group bg-white rounded-2xl p-8 cursor-pointer transition-all duration-300 hover:shadow-xl border border-gray-100 hover:border-emerald-100 flex flex-col items-center text-center relative overflow-hidden">
-                    <!-- Top accent line on hover -->
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-400 to-emerald-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                <!-- Card 3: D-LEP Manual (Modern Minimal) -->
+                <div onclick="showPage('topic-3')" class="group relative bg-white rounded-[2rem] p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-emerald-100/50 border border-gray-100 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-emerald-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
 
-                    <div class="mb-6 p-4 rounded-full bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-                        <!-- Book/Manual Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-8 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-emerald-300/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">คู่มือระบบ D-LEP</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">คู่มือการใช้งานระบบดิจิทัลเพื่อการพัฒนาวิชาชีพทางการศึกษาท้องถิ่น</p>
+
+                        <div class="flex items-center text-emerald-500 text-sm font-medium">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                    <h3 class="text-lg font-bold text-gray-800 mb-3 group-hover:text-emerald-700 transition-colors">คู่มือการใช้งานระบบ D-LEP</h3>
-                    <p class="text-gray-500 text-sm font-light leading-relaxed mb-6">คู่มือการใช้งานระบบดิจิทัลเพื่อการพัฒนา<br>วิชาชีพทางการศึกษาท้องถิ่น</p>
+                <!-- Card 4: Influenza Measures (Modern Minimal) -->
+                <div onclick="showPage('topic-4')" class="group relative bg-white rounded-[2rem] p-8 cursor-pointer transition-all duration-500 hover:shadow-2xl hover:shadow-rose-100/50 border border-gray-100 hover:-translate-y-2 overflow-hidden">
+                    <!-- Decorative Background Blob -->
+                    <div class="absolute -right-12 -top-12 w-40 h-40 rounded-full bg-rose-50 opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"></div>
 
-                    <span class="mt-auto text-emerald-500 text-xs font-semibold tracking-wide uppercase flex items-center gap-2 group-hover:gap-3 transition-all">
-                        เข้าดูข้อมูล
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </span>
+                    <div class="relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-8 group-hover:bg-rose-600 group-hover:text-white transition-all duration-300 shadow-sm group-hover:shadow-rose-300/50">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-rose-700 transition-colors">มาตรการโรคไข้หวัดใหญ่</h3>
+                        <p class="text-gray-500 text-sm font-light leading-relaxed mb-8 max-w-xs">มาตรการป้องกันและควบคุมโรคไข้หวัดใหญ่ในสถานศึกษา</p>
+
+                        <div class="flex items-center text-rose-500 text-sm font-medium">
+                            <span class="group-hover:mr-3 transition-all duration-300">ดูข้อมูลรายละเอียด</span>
+                            <div class="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -329,6 +373,40 @@
                             class="absolute inset-0 w-full h-full border-0" 
                             allow="autoplay">
                     </iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAGE: TOPIC 4 (Influenza Prevention) -->
+        <div id="page-topic-4" class="page-section hidden fade-in">
+             <!-- Back Button & Header -->
+             <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <button onclick="showPage('home')" class="flex items-center text-gray-600 hover:text-rose-700 transition-colors bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-200 w-fit">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    กลับหน้าหลัก
+                </button>
+                <div class="text-right md:max-w-2xl">
+                   <h2 class="text-xl md:text-2xl font-bold text-gray-800">มาตรการป้องกันและควบคุมโรคไข้หวัดใหญ่</h2>
+                   <p class="text-sm text-gray-500">ในสถานศึกษา สังกัดเทศบาลตำบลหัวดง</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-1 border border-gray-200 max-w-4xl mx-auto">
+                <!-- Image Container -->
+                <div class="relative overflow-hidden rounded-lg bg-gray-100">
+                    <img src="https://res.cloudinary.com/dygneumft/image/upload/v1767078902/%E0%B8%82%E0%B9%88%E0%B8%B2%E0%B8%A7%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%8A%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%A1%E0%B8%9E%E0%B8%B1%E0%B8%99%E0%B8%98%E0%B9%8C%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2%20%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82/1.%20%E0%B9%84%E0%B8%82%E0%B9%89%E0%B8%AB%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B9%83%E0%B8%AB%E0%B8%8D%E0%B9%88/unnamed_3_adbeoy.png" 
+                         alt="มาตรการป้องกันโรคไข้หวัดใหญ่" 
+                         class="w-full h-auto object-contain cursor-zoom-in"
+                         onclick="window.open(this.src, '_blank')">
+                </div>
+                
+                <div class="p-4 bg-gray-50 flex justify-center items-center gap-2 text-sm text-gray-500 rounded-b-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                    คลิกที่รูปภาพเพื่อดูขนาดเต็ม
                 </div>
             </div>
         </div>
